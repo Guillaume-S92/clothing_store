@@ -20,7 +20,7 @@ function ProductList() {
           <li key={product._id}>
             <h3>{product.name}</h3>
             <p>Prix : {product.price} €</p>
-            <Link to={`/product/${product._id}`}>Voir les détails</Link> {/* Lien vers les détails du produit */}
+            <Link to={`/product/${product._id._str}`}>Voir les détails</Link>
           </li>
         ))}
       </ul>
