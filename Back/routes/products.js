@@ -18,13 +18,13 @@ router.get('/products', async (req, res) => {
 // Créer un nouveau produit
 router.post('/products', async (req, res) => {
   try {
-    const { name, price, description, imageUrl } = req.body;
+    const { name, price, description, image } = req.body;
 
     const newProduct = new Product({
       name,
       price,
       description,
-      imageUrl,
+      image,
     });
 
     await newProduct.save();

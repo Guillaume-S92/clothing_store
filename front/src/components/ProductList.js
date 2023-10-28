@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Importez Link
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -19,7 +20,7 @@ function ProductList() {
           <li key={product._id}>
             <h3>{product.name}</h3>
             <p>Prix : {product.price} €</p>
-            <button>Ajouter au Panier</button>
+            <Link to={`/product/${product._id}`}>Voir les détails</Link> {/* Lien vers les détails du produit */}
           </li>
         ))}
       </ul>
