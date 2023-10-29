@@ -6,6 +6,7 @@ const passport = require('passport');
 const session = require('express-session');
 const cors = require('cors');
 const productRoutes = require('./routes/products');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 
@@ -29,8 +30,8 @@ mongoose.connect('mongodb+srv://Guillaume:test@cluster0.pfjuogp.mongodb.net/Dres
 .catch(error => console.error('MongoDB connection error:', error));
 
 // Routes
-const authRoutes = require('./routes/auth');
 app.use('/api', productRoutes);
+app.use('/auth', authRoutes);
 
 // Start Server
 const PORT = process.env.PORT || 5000;
