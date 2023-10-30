@@ -1,11 +1,10 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'; // Utilisez Routes et Route
+import { Routes, Route, Link } from 'react-router-dom';
 import './index.css';
 import ProductList from './components/ProductList';
+import ProductDetail from './components/ProductDetail'; // Importez ProductDetail
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
-
-
 
 function App() {
   return (
@@ -14,13 +13,13 @@ function App() {
         <nav>
           <ul>
             <li>
-              <a href="/">Accueil</a>
+              <Link to="/">Accueil</Link> {/* Utilisez Link */}
             </li>
             <li>
-              <a href="/loginPage">Login</a>
+              <Link to="/loginPage">Login</Link> {/* Utilisez Link */}
             </li>
             <li>
-              <a href="/registerPage">Register</a>
+              <Link to="/registerPage">Register</Link> {/* Utilisez Link */}
             </li>
           </ul>
         </nav>
@@ -30,6 +29,7 @@ function App() {
         <Route path="/" element={<ProductList />} />
         <Route path="/loginPage" element={<LoginPage />} />
         <Route path="/registerPage" element={<RegisterPage />} />
+        <Route path="/product/:id" element={<ProductDetail />} /> {/* Route pour ProductDetail */}
       </Routes>
     </div>
   );

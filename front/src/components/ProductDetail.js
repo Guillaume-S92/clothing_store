@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom'; // Importez useParams
 
-function ProductDetail({ match }) {
+function ProductDetail() {
+  const { id } = useParams(); // Obtenez l'ID du produit à partir de l'URL
+
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const productId = match.params.id;
-
-    axios.get(`http://localhost:5000/api/products/${productId}`)
+    axios.get(`http://localhost:5000/api/products/${id}`)
       .then(response => setProduct(response.data))
       .catch(error => console.error('Erreur lors de la récupération du produit', error));
-  }, [match]);
+  }, [id]);
 
   if (!product) {
     return <div>Chargement...</div>;
