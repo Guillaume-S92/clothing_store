@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom'; // Importez useParams
+import { useParams } from 'react-router-dom';
 
 function ProductDetail() {
-  const { id } = useParams(); // Obtenez l'ID du produit à partir de l'URL
-
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios.get(`http://localhost:5000/api/products/${id}`)
-      .then(response => setProduct(response.data))
-      .catch(error => console.error('Erreur lors de la récupération du produit', error));
+      .then(response => {
+        if (response.data) {
+          setProduct(response.data);
+        } else {
+          setError('Produit introuvable');
+        }
+      })
+      .catch(error => {
+        console.error('Erreur lors de la récupération du produit', error);
+        setError('Une erreur s\'est produite lors de la récupération du produit.');
+      });
   }, [id]);
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   if (!product) {
     return <div>Chargement...</div>;
