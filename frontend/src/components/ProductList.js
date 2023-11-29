@@ -5,25 +5,28 @@ function ProductList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/products')
-      .then((response) => {
-        setProducts(response.data); 
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('/api/products');
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
   }, []);
 
   return (
     <div>
-      <h1>Liste des Produits</h1>
+      <h1>Product List</h1>
       <ul>
         {products.map((product) => (
           <li key={product._id}>
             <h2>{product.name}</h2>
-            <p>Prix: {product.price} €</p>
+            <p>Price: ${product.price}</p>
             <img src={product.image} alt={product.name} />
-            {/* Ajouter plus de détails pour les produits */}
+            {/* Add more product information here */}
           </li>
         ))}
       </ul>
