@@ -1,0 +1,107 @@
+.ProductView {
+  max-width: 1300px;
+  margin: 1rem auto;
+  display: flex;
+  background: #f4f4f4; /* Nouvelle couleur de fond */
+}
+
+.ProductView__left {
+  display: flex;
+  flex: 0.8;
+}
+
+.left__image {
+  margin: 1rem;
+  flex: 0.6;
+}
+
+.left__info {
+  margin: 1rem;
+  flex: 0.4;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Nouvelle ombre */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.left__name {
+  font-weight: bold;
+  font-size: 1.5rem; /* Taille de police augmentée */
+  margin-bottom: 1rem;
+}
+
+.left__info > p,
+.right__info > p {
+  padding: 0.5rem 0; /* Ajustement des espacements */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.left__info > p:last-child,
+.right__info > p:last-child {
+  border: none;
+}
+
+.ProductView__right {
+  flex: 0.2;
+}
+
+.right__info {
+  width: 100%;
+  margin: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.right__info p {
+  padding: 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.right__info p > button {
+  width: 100%;
+  padding: 10px 16px;
+  background: #3498db; /* Nouvelle couleur de bouton */
+  color: #fff;
+  border: 1px solid #3498db;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 0.5rem; /* Ajustement de la marge */
+}
+
+.right__info select {
+  padding: 10px 16px;
+  margin-top: 0.5rem; /* Ajustement de la marge */
+}
+
+@media (max-width: 960px) {
+  .ProductView {
+    flex-direction: column;
+  }
+
+  .ProductView__left {
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .left__image {
+    flex: 1;
+  }
+
+  .left__info {
+    flex: 1;
+    
+  }
+
+  .ProductView__right {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .right__info {
+    width: 100%;
+    margin: 0;
+  }
+}

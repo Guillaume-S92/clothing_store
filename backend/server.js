@@ -1,36 +1,28 @@
-const express = require("express");
-const data = require("./data");
-const dotenv = require("dotenv");
-// const config = require("./config");
-const mongoose = require("mongoose");
-const userRoute = require("./routes/userRoute");
-const productRoute = require("./routes/productRoute");
-const bodyParser = require("body-parser");
+require('dotenv').config();
+const express = require('express');
+const productRoutes = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes'); 
 
-dotenv.config();
-/*const mongodbUrl = config.MONGODB_URL;
-mongoose.connect(mongodbUrl , {
-    useNewUrlParser : true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-})
-.catch(error => console.log(error.reason));*/
+const { connectDB } = require('./config/db');
+const cors = require('cors');
 
-// MongoDB Connection
-mongoose.connect('mongodb+srv://Guillaume:test@cluster0.pfjuogp.mongodb.net/Dressing_backup', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch(error => console.error('MongoDB connection error:', error));
+connectDB();
 
 const app = express();
-app.use(bodyParser.json());
 
-app.use("/api/users" , userRoute);
-app.use("/api/products" , productRoute);
+app.use(express.json());
+app.use(cors());
 
-
-app.listen(5000 , ()=>{
-    console.log("Server started at http://localhost:5000")
+app.get('/', (req, res) => {
+  res.json({ message: 'API running...' });
 });
+
+app.use('/api/products', productRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/orders', orderRoutes); 
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -1,0 +1,42 @@
+.confirmation-page {
+    max-width: 1300px;
+    margin: 2rem auto;
+  }
+  
+  .confirmation-page h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .confirmation-page p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .confirmation-page strong {
+    font-weight: bold;
+  }
+  
+  .confirmation-page ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .confirmation-page ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .confirmation-page__thank-you {
+    font-size: 1.2rem;
+    color: #3498db;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .confirmation-page {
+      padding: 1rem;
+    }
+  }
+  

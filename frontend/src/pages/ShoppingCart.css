@@ -1,0 +1,77 @@
+.ShoppingCart {
+  display: flex;
+  max-width: 1300px;
+  margin: 2rem auto;
+}
+
+.ShoppingCart h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Ajustement de la taille de police */
+  color: #2c3e50; /* Couleur de texte ajustée */
+}
+
+.ShoppingCart__left {
+  flex: 0.7;
+  margin-right: 1rem;
+  background: #fff; /* Fond ajusté */
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Nouvelle ombre */
+}
+
+.ShoppingCart__right {
+  flex: 0.3;
+  background: #f4f4f4; /* Fond ajusté */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.ShoppingCart__right div {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.ShoppingCart__info p {
+  padding: 8px;
+  margin: 0; /* Suppression de la marge pour les paragraphes */
+}
+
+.ShoppingCart__info p:first-child {
+  font-weight: bold;
+}
+
+.ShoppingCart__right div:last-child {
+  border: none;
+}
+
+.ShoppingCart__right div button {
+  padding: 10px 17px;
+  width: 100%;
+  background: #3498db; /* Nouvelle couleur de bouton */
+  color: #fff;
+  border: 1px solid #3498db;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.ShoppingCart__right div button:hover {
+  background: #2c3e50; /* Nouvelle couleur de survol */
+  color: #fff;
+}
+
+@media (max-width: 1320px) {
+  .ShoppingCart {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 960px) {
+  .ShoppingCart {
+    max-width: 800px;
+    flex-direction: column;
+  }
+
+  .ShoppingCart__right {
+    margin: 1rem;
+  }
+}
