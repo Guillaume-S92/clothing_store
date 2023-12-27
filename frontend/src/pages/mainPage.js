@@ -38,7 +38,7 @@ const MainPage = () => {
       <h2 className="mainPage__title" onClick={() => handleCategoryClick('Robe')}>
         Robes
       </h2>
-      <h2 className="mainPage__title" onClick={() => handleCategoryClick('Chaussures')}>Chaussures</h2>
+      <h2 className="mainPage__title" onClick={() => handleCategoryClick('Chaussure')}>Chaussures</h2>
       <h2 className="mainPage__title" onClick={() => handleCategoryClick('Jeans')}>Jeans</h2>
       <h2 className="mainPage__title" onClick={() => handleCategoryClick('Pull')}>Pull</h2>
       <h2 className="mainPage__title" onClick={() => handleCategoryClick('Veste')}>Vestes</h2>

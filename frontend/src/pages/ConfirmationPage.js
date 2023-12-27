@@ -1,18 +1,31 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { resetCart } from "../redux/actions/cartActions";
 import './ConfirmationPage.css';
 
 const ConfirmationPage = () => {
   const orderDetails = useSelector((state) => state.cart.lastOrder);
-  console.log('ConfirmationPage rendered');
-  console.log('Cart state:', useSelector((state) => state.cart));
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-  if (!orderDetails || Object.keys(orderDetails).length === 0) {
-    // Gérez le cas où il n'y a pas de détails de commande disponibles
-    return <p>Invalid access to confirmation page.</p>;
-  }
+  useEffect(() => {
+    // S'assure que les détails de la commande existent avant de continuer
+    if (!orderDetails || Object.keys(orderDetails).length === 0) {
+      // Redirige vers une page d'erreur
+      history.push("/error"); 
+    }
+  }, [orderDetails, history]);
 
   const { firstName, lastName, email, phone, products } = orderDetails;
+
+  const handleReturnHome = () => {
+    // Réinitialiser le panier une fois la commande confirmée
+    dispatch(resetCart());
+
+    // Redirection vers la page d'accueil
+    history.push("/");
+  };
 
   return (
     <div className="confirmation-page">
@@ -37,6 +50,9 @@ const ConfirmationPage = () => {
         ))}
       </ul>
       <p className="confirmation-page__thank-you">Votre commande est confirmée. Merci d'avoir réalisé votre shopping chez nous!</p>
+
+      {/* Bouton pour revenir à la page d'accueil */}
+      <button onClick={handleReturnHome}>Retour à la page d'accueil</button>
     </div>
   );
 };

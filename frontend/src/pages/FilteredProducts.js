@@ -1,7 +1,7 @@
 // FilteredProducts.js
 import React from 'react';
 import { useSelector } from 'react-redux';
-
+import './filteredProducts.css';
 import Product from '../components/Product';
 
 const FilteredProducts = ({ match }) => {

@@ -30,6 +30,12 @@ export const removeFromCart = ({ pId, _id }) => (dispatch) => {
   Api.DeleteRequest('/api/cart/' + _id);
 };
 
+export const resetCart = () => (dispatch) => {
+  dispatch({
+    type: actionTypes.CART_RESET,
+  });
+};
+
 export const fetchCart = () => async (dispatch) => {
   try {
     const { data: strigifyData } = await Api.getRequest(`/api/cart/`);

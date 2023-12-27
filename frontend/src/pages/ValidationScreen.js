@@ -60,6 +60,8 @@ const ValidationScreen = () => {
       setEmail('');
       setPhone('');
 
+      
+
       // Redirigez l'utilisateur vers la page de confirmation
       history.push('/confirmation');
     } catch (error) {
@@ -109,7 +111,11 @@ const ValidationScreen = () => {
 
       <div className="validationscreen__cart">
         {cartItems.map((product) => (
-          <CartItem key={product.product} item={product} />
+          <CartItem
+            key={product.product}
+            item={product}
+            editable={false}  // Passer editable=false pour désactiver les options de modification
+          />
         ))}
       </div>
     </div>
