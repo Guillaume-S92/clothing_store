@@ -45,7 +45,7 @@ const ValidationScreen = () => {
 
     try {
       // Envoi des données au backend
-      await axios.post('http://localhost:3000/api/orders', order);
+      await axios.post('http://localhost:3001/api/orders', order);
 
       // Appel de l'action confirmOrder avec les détails de la commande
       dispatch(confirmOrder(order));
