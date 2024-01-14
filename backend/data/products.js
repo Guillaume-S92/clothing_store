@@ -1,22 +1,22 @@
 const products = [
   {
-    name: "Veste d'été",
+    name: "Gilet sans manche en laine",
     imageUrl:
       "https://raw.githack.com/Guillaume-S92/clothing_store/main/images/pexels-anj-namoro-2850487.jpg",
     description:
       "Une super belle veste pour vos soirée d'été!",
-    price: 79,
+    price: 80,
     countInStock: 15,
     brand: 'Zara',
-    category: 'Veste',
+    category: 'Pull',
   },
   {
-    name: "Robe légère courte à bretelle",
+    name: "Robe légére fleurie",
     imageUrl:
       "https://raw.githack.com/Guillaume-S92/clothing_store/main/images/pexels-caio-45924.jpg",
     description:
       "Une robe légère parfaite pour la saison",
-    price: 69,
+    price: 70,
     countInStock: 10,
     brand: 'Desigual',
     category: 'Robe',
@@ -33,7 +33,7 @@ const products = [
     category: 'Robe',
   },
   {
-    name: "Jean bleu",
+    name: "Jean bleu effet délavé",
     imageUrl:
       "https://raw.githack.com/Guillaume-S92/clothing_store/main/images/pexels-karolina-grabowska-4210864.jpg",
     description:
@@ -44,34 +44,34 @@ const products = [
     category: 'Jeans',
   },
   {
-    name: "Chaussure de ville",
+    name: "Derbie en cuir noir",
     imageUrl:
       "https://raw.githack.com/Guillaume-S92/clothing_store/main/images/pexels-lukas-292999.jpg",
     description:
       "Chaussure de ville en cuir",
-    price: 233,
+    price: 110,
     countInStock: 4,
     brand: 'Celio',
     category: 'Chaussure',
   },
   {
-    name: "Robe à fleur",
+    name: "Robe beige à fleurs blanches ",
     imageUrl:
       "https://raw.githack.com/Guillaume-S92/clothing_store/main/images/pexels-maksim-goncharenok-4352249.jpg",
     description:
       "Robe courte à fleur",
-    price: 140,
+    price: 60,
     countInStock: 10,
     brand: 'Bizzbee',
     category: 'Robe',
   },
   {
-    name: "Pull",
+    name: "Pull à rayures en laine",
     imageUrl:
       "https://raw.githack.com/Guillaume-S92/clothing_store/main/images/pull.png",
     description:
       "C'est un beau pull",
-    price: 140,
+    price: 40,
     countInStock: 10,
     brand: 'Bizzbee',
     category: 'Pull',
