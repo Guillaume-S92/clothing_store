@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mern-ecommerce-Le_Vestiaire/static/css/main.d46c35cc.chunk.css",
+    "main.js": "/mern-ecommerce-Le_Vestiaire/static/js/main.578df16b.chunk.js",
+    "main.js.map": "/mern-ecommerce-Le_Vestiaire/static/js/main.578df16b.chunk.js.map",
+    "runtime-main.js": "/mern-ecommerce-Le_Vestiaire/static/js/runtime-main.d3ef8ece.js",
+    "runtime-main.js.map": "/mern-ecommerce-Le_Vestiaire/static/js/runtime-main.d3ef8ece.js.map",
+    "static/js/2.5148d279.chunk.js": "/mern-ecommerce-Le_Vestiaire/static/js/2.5148d279.chunk.js",
+    "static/js/2.5148d279.chunk.js.map": "/mern-ecommerce-Le_Vestiaire/static/js/2.5148d279.chunk.js.map",
+    "static/js/3.0927935a.chunk.js": "/mern-ecommerce-Le_Vestiaire/static/js/3.0927935a.chunk.js",
+    "static/js/3.0927935a.chunk.js.map": "/mern-ecommerce-Le_Vestiaire/static/js/3.0927935a.chunk.js.map",
+    "index.html": "/mern-ecommerce-Le_Vestiaire/index.html",
+    "static/css/main.d46c35cc.chunk.css.map": "/mern-ecommerce-Le_Vestiaire/static/css/main.d46c35cc.chunk.css.map",
+    "static/js/2.5148d279.chunk.js.LICENSE.txt": "/mern-ecommerce-Le_Vestiaire/static/js/2.5148d279.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3ef8ece.js",
+    "static/js/2.5148d279.chunk.js",
+    "static/css/main.d46c35cc.chunk.css",
+    "static/js/main.578df16b.chunk.js"
+  ]
+}
