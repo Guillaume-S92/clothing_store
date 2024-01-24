@@ -18,7 +18,7 @@ const Product = ({ imageUrl, description, price, name, productId, linkTo }) => {
         <p className="info__description">{truncatedDescription}</p>
 
 
-        <p className="info__price">€{price}</p>
+        <p className="info__price">{price}€</p>
 
         {/* Lien vers la page détaillée du produit */}
         <Link to={linkTo || `/product/${productId}`} className="info__button">

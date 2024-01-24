@@ -42,7 +42,7 @@ const ProductView = ({ match }) => {
             </div>
             <div className="left__info">
               <p className="left__name">{product.name}</p>
-              <p>Prix: €{product.price}</p>
+              <p>Prix: {product.price}€</p>
               <p>Description: {product.description}</p>
               <p>Catégorie: {product.category}</p>
               <p>Marque: {product.brand}</p>
@@ -52,7 +52,7 @@ const ProductView = ({ match }) => {
             <div className="right__info">
               <p>
                 Prix:
-                <span>{`€${product.price}`}</span>
+                <span>{`${product.price}€`}</span>
               </p>
               <p>
                 Statut:

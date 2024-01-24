@@ -61,7 +61,7 @@ const ShoppingCart = () => {
           <div className="ShoppingCart__right">
             <div className="ShoppingCart__info">
               <p>Sous total ({getCartCount()}) article</p>
-              <p>€{getCartSubTotal()}</p>
+              <p>{getCartSubTotal()}€</p>
             </div>
             <div>
               <Link to="/checkout">
